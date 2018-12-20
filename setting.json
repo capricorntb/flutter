@@ -1,0 +1,99 @@
+{"vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "editor.cursorBlinking": "solid",
+  "explorer.confirmDelete": false,
+  "workbench.colorTheme": "Atom One Dark",
+  "editor.fontSize": 16,
+  "[python]": {},
+  "workbench.activityBar.visible": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "terminal.integrated.rendererType": "dom",
+  "window.zoomLevel": 0,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "c"
+      ],
+      "after": [
+        "g",
+        "c"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": ":nohl"
+        }
+      ]
+    },
+    {
+      "before": [
+        "Z",
+        "Z"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.save",
+          "args": []
+        },
+        {
+          "command": "workbench.action.closeActiveEditor",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "Z",
+        "Q"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.revert",
+          "args": []
+        },
+        {
+          "command": "workbench.action.closeActiveEditor",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "w"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.save",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "vim.leader": ",",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": true,
+    "<C-b>": true
+}

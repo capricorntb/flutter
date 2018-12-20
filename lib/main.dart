@@ -1,62 +1,45 @@
 import 'package:flutter/material.dart';
+import 'model/post.dart';
+import 'demo/listview_demo.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(App());
+}
 
-class MyApp extends StatelessWidget {
-  // @override
-  // Widget build(BuildContext context) {
-  //   return MaterialApp(
-  //     title: 'hello flutter',
-  //     home: Scaffold(
-  //       appBar: AppBar(
-  //         title: Text('welcome to flutter world'),
-  //       ),
-  //       body: Center(
-  //         child: Container(
-  //           child: Image.network(
-  //             'https://n.sinaimg.cn/news/crawl/116/w550h366/20181214/wK02-hqackac8387017.jpg',
-  //             color: Colors.greenAccent,
-  //             colorBlendMode: BlendMode.color,
-  //             repeat: ImageRepeat.repeatY,
-  //           ),
-  //           width: 500.0,
-  //           height: 400.0,
-  //           color: Colors.lightBlue,
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      home: Home(),
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
-      ),
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          elevation: 40.0,
-          title: new Text('come in '),
-          leading: Icon(Icons.menu),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () => debugPrint('搜索'),
-            )
-          ],
-        ),
-        body: new ListView(
-          children: <Widget>[
-            new Image.network(
-                'http://dart.goodev.org/assets/covers/learning-dart-a03a3eca556e403d8a908cedd2b37eddb276dbae4d3c8195e1f22586573fd11a.png'),
-            new Image.network(
-                'http://dart.goodev.org/assets/covers/learning-dart-a03a3eca556e403d8a908cedd2b37eddb276dbae4d3c8195e1f22586573fd11a.png'),
-            new Image.network(
-                'http://dart.goodev.org/assets/covers/learning-dart-a03a3eca556e403d8a908cedd2b37eddb276dbae4d3c8195e1f22586573fd11a.png'),
-          ],
-        ),
-      ),
-    );
+        primarySwatch: Colors.yellow
+      )
+        );
   }
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.grey[100],
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.menu),
+            tooltip: 'Navigration',
+            onPressed: () => debugPrint('Navigation button is pressed'),
+          ),
+          title: Text('Capricorn'),
+          actions: <Widget>[
+           IconButton(
+            icon: Icon(Icons.search),
+            tooltip: 'search',
+            onPressed: () => debugPrint('search button is pressed'),
+          ), 
+          ],
+          elevation: 10.0,
+        ),
+        body: null,
+        ); 
+} 
 }
