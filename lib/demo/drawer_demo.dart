@@ -14,6 +14,9 @@ class DrawerDemo extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             accountEmail: Text('nobody@nowhere'),
+            currentAccountPicture: CircleAvatar(
+              backgroundImage: AssetImage('images/avator.jpeg'),
+            ),
           ),
           ListTile(
             title: Text(
