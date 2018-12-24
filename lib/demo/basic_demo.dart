@@ -6,14 +6,14 @@ class BasicDemo extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('images/avator.jpeg'),
-          alignment: Alignment.topCenter,
-          // repeat: ImageRepeat.repeat,
-          fit: BoxFit.cover,
-          colorFilter: ColorFilter.mode(
-            Colors.white.withOpacity(0.5),
-            BlendMode.hardLight,)
-        ),
+            image: AssetImage('images/avator.jpeg'),
+            alignment: Alignment.topCenter,
+            // repeat: ImageRepeat.repeat,
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(
+              Colors.white.withOpacity(0.5),
+              BlendMode.hardLight,
+            )),
       ),
       // color: Colors.grey[200],
       child: Row(
@@ -46,7 +46,8 @@ class BasicDemo extends StatelessWidget {
                   color: Color.fromRGBO(16, 20, 188, 1.0),
                   blurRadius: 2.0,
                   spreadRadius: 2.0,
-                )],
+                )
+              ],
               shape: BoxShape.circle,
               // gradient: RadialGradient(
               //   colors: [
@@ -55,8 +56,8 @@ class BasicDemo extends StatelessWidget {
               //   ],
               gradient: LinearGradient(
                 colors: [
-                  Color.fromRGBO(7, 102, 255,1.0),
-                  Color.fromRGBO(3, 28, 128,1.0),
+                  Color.fromRGBO(7, 102, 255, 1.0),
+                  Color.fromRGBO(3, 28, 128, 1.0),
                 ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -79,13 +80,14 @@ class RichTextDemo extends StatelessWidget {
           style: TextStyle(
             color: Colors.deepPurpleAccent,
             fontsize: 50.0,
-            fontStyle: FontStyle.italic,
+            fontStyle: FontStyle.normal,
             fontWeight: FontWeight.w100,
           ),
           children: [
             TextSpan(
                 text: '.com',
                 style: TextStyle(
+                  fontStyle: FontStyle.italic,
                   fontsize: 17.0,
                   color: Colors.black,
                 ))
@@ -103,12 +105,23 @@ class TextDemo extends StatelessWidget {
   final String _title = '将进酒';
   @override
   Widget build(BuildContext context) {
-    return Text(
+    return Container(
+      child:  Text(
       '<< $_title>> ---- $_authour.君不见黄河之水天上来，奔流到海不复回，群不见高堂明镜悲白发，朝如青丝暮成雪，人生得意须尽欢，莫使金樽空对月，天生我材必有用，千金散尽还复来，烹羊宰牛且为乐，会须一饮三百杯。',
       textAlign: TextAlign.left,
-      style: _textStyle,
+      // style: _textStyle,
+      style: TextStyle(
+        fontsize: 25.0,
+        decoration: TextDecoration.underline,
+        decorationStyle: TextDecorationStyle.solid,
+      ),
       maxLines: 3,
       overflow: TextOverflow.ellipsis,
+    ),
+    alignment: Alignment.center,
+    width: 100.0,
+    height: 100.0,
+    color: Colors.lightBlue,
     );
   }
 }
