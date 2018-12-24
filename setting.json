@@ -1,6 +1,6 @@
 {"vim.useCtrlKeys": true,
   "vim.hlsearch": true,
-  "editor.cursorBlinking": "solid",
+  "editor.cursorBlinking": "",
   "explorer.confirmDelete": false,
   "workbench.colorTheme": "Atom One Dark",
   "editor.fontSize": 16,
