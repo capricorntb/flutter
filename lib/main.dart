@@ -6,6 +6,7 @@ import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/basic_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/view_demo.dart';
+import 'demo/sliver_demo.dart';
 
 void main() {
   runApp(App());
@@ -15,7 +16,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        // debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,
         home: Home(),
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
@@ -60,7 +61,8 @@ class Home extends StatelessWidget {
             ListViewDemo(),
             TextDemo(),
             LayoutDemo(),
-            ViewDemo()
+            // ViewDemo(),
+            SliverDemo(),
             // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
           ],
         ),
