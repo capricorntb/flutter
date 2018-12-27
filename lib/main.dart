@@ -8,6 +8,7 @@ import 'demo/layout_demo.dart';
 import 'demo/view_demo.dart';
 import 'demo/sliver_demo.dart';
 import 'demo/navigator_demo.dart';
+import 'demo/form_demo.dart';
 
 void main() {
   runApp(App());
@@ -18,13 +19,15 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Home(),
+        // home: Home(),
         // home: NavigatorDemo(), //把这个函数移到下面,用根路由指向它。
-        // initialRoute: '/',
-        // routes: {
-        //   '/': (context) => NavigatorDemo(),
-        //   '/about': (context) => Page(title: '关于',),
-        // },
+        initialRoute: '/form',
+        routes: {
+          // '/': (context) => NavigatorDemo(),
+          '/': (context) => Home(),
+          '/about': (context) => Page(title: '关于',),
+          '/form': (context) => FormDemo(),
+        },
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),

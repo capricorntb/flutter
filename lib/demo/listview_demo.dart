@@ -41,8 +41,11 @@ class ListViewDemo extends StatelessWidget {
                   splashColor: Colors.white.withOpacity(0.3),
                   highlightColor: Colors.white.withOpacity(0.1),
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => PostShow(post: posts[index])));
+                    Navigator.push(context, MaterialPageRoute(
+                      builder:(context) => PostShow(post: posts[index],) ));
+                    // 下面注释的Navigator导航代码功能一样。
+                    // Navigator.of(context).push(MaterialPageRoute(
+                    //     builder: (context) => PostShow(post: posts[index])));
                   },
                 ),
               ),

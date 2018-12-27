@@ -17,6 +17,12 @@ class DrawerDemo extends StatelessWidget {
             currentAccountPicture: CircleAvatar(
               backgroundImage: AssetImage('images/avator.jpeg'),
             ),
+            decoration: BoxDecoration(
+              image: DecorationImage(image: 
+              NetworkImage('http://www.liulongbin.top:3005/images/bg1.jpg'),
+              fit: BoxFit.cover,
+            ),
+          ),
           ),
           ListTile(
             title: Text(
