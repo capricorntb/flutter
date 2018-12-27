@@ -9,6 +9,8 @@ import 'demo/view_demo.dart';
 import 'demo/sliver_demo.dart';
 import 'demo/navigator_demo.dart';
 import 'demo/form_demo.dart';
+import 'demo/buttons.dart';
+
 
 void main() {
   runApp(App());
@@ -21,12 +23,13 @@ class App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         // home: Home(),
         // home: NavigatorDemo(), //把这个函数移到下面,用根路由指向它。
-        initialRoute: '/form',
+        initialRoute: '/buttons',
         routes: {
           // '/': (context) => NavigatorDemo(),
           '/': (context) => Home(),
           '/about': (context) => Page(title: '关于',),
           '/form': (context) => FormDemo(),
+          '/buttons': (context) => Buttons(),
         },
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
