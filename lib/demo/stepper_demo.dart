@@ -6,7 +6,7 @@ class StepperDemo extends StatefulWidget {
 }
 
 class _StepperDemoState extends State<StepperDemo> {
-  int  _currentStep = 0;
+  int _currentStep = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,33 +30,36 @@ class _StepperDemoState extends State<StepperDemo> {
                     _currentStep = value;
                   });
                 },
-                onStepContinue: (){
+                onStepContinue: () {
                   setState(() {
-                    _currentStep <2 ? _currentStep += 1: _currentStep =0;
+                    _currentStep < 2 ? _currentStep += 1 : _currentStep = 0;
                   });
                 },
-                onStepCancel: (){
+                onStepCancel: () {
                   setState(() {
-                    _currentStep >0 ? _currentStep -= 1 : _currentStep =0 ;
+                    _currentStep > 0 ? _currentStep -= 1 : _currentStep = 0;
                   });
                 },
                 steps: [
                   Step(
                     title: Text('Login'),
                     subtitle: Text('Login First'),
-                    content: Text('Cillum anim aute quis nulla cillum proident adipisicing commodo.'),
+                    content: Text(
+                        'Cillum anim aute quis nulla cillum proident adipisicing commodo.'),
                     isActive: _currentStep == 0,
                   ),
                   Step(
                     title: Text('Choose Plan'),
                     subtitle: Text('Choose your plan'),
-                    content: Text('Cillum anim aute quis nulla cillum proident adipisicing commodo.'),
+                    content: Text(
+                        'Cillum anim aute quis nulla cillum proident adipisicing commodo.'),
                     isActive: _currentStep == 1,
                   ),
                   Step(
                     title: Text('Confirm payment'),
                     subtitle: Text('Confirm your payment method.'),
-                    content: Text('Cillum anim aute quis nulla cillum proident adipisicing commodo.'),
+                    content: Text(
+                        'Cillum anim aute quis nulla cillum proident adipisicing commodo.'),
                     isActive: _currentStep == 2,
                   ),
                 ],
