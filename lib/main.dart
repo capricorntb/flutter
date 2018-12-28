@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/demo/stream/stream_demo.dart';
 import 'model/post.dart';
 import 'demo/listview_demo.dart';
 import 'demo/drawer_demo.dart';
@@ -23,13 +24,14 @@ class App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         // home: Home(),
         // home: NavigatorDemo(), //把这个函数移到下面,用根路由指向它。
-        initialRoute: '/state-management',
+        initialRoute: '/stream',
         routes: {
           // '/': (context) => NavigatorDemo(),
           '/': (context) => Home(),
           '/about': (context) => Page(title: '关于',),
           '/form': (context) => FormDemo(),
           '/buttons': (context) => Buttons(),
+          '/stream': (context) => StreamDemo(),
           '/state-management': (context) => StateManagementDemo(),
         },
         theme: ThemeData(
